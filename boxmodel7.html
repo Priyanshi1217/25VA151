@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Layout</title>
     <style>
-        body{margin: 0;
-        padding: 0}
-        html,*{
+        body{
+        margin: 0;
+        padding: 0;
+        }
+        html, * {
             margin: 0;
             padding: 0;
             box-sizing: border-box; color: black;
@@ -21,6 +23,7 @@
             flex-direction: column;
             gap: 10px;
             text-align: center;
+            border: 10px solid black;
         }
         header, nav{
            height: 100px;
@@ -46,20 +49,23 @@
             background-color: beige;
             display: flex;
             flex-direction: column;
-            gap: 10px;
         }
         #rgt_top, #rgt_btm{
             height: 150px;
             background-color:yellow; 
-            line-height: 100px;
+            line-height:100px;
+           border-bottom: 10px solid black;
         }
         #left_top{
-            height: 30px;
+            height: 40px;
             background-color: red;
+            border-bottom: 10px solid black;
         }
         #left_middle{
             height: 70px;
             background-color: khaki;
+             border-bottom: 10px solid black;
+             padding-top: 10px;
         }
 
         #left_down {
@@ -67,18 +73,19 @@
             justify-content: center; 
             align-items: center;
             flex-direction: row;
-            height: 200px;
             gap: 10px; color: black;
         }
-        #left_btm1, #left_btm2{
-            width: 200px; 
-            height: 200px;
-            background-color: #f7d298; 
+        .left_btm1, .left_btm2{
+            width: 320px; 
+            height: 190px; 
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
             
+        }
+        .left_btm1{
+            border-right: 10px solid black;
         }
       
         /*#left_btm1, #left_btm2 {
