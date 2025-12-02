@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-grid-container {
+            width: 100%;
+            max-width: 1200px; /* Max width of the main content area */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: normal;
+        }
+
+        /* --- Flexbox Grid Setup --- */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+            gap: 20px; /* Space between cards */
+            justify-content: center; /* Center the cards if there's extra space */
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            /* Calculate width to fit 4 cards with 20px gap, and still be flexible */
+            flex: 1 1 calc(25% - 15px); 
+            min-width: 200px; /* Ensures card doesn't get too narrow */
+            border: 1px solid #ddd; /* Light border similar to the image */
+        }
+
+        /* --- Card Content Styling --- */
+        .product-image {
+            height: 80px; /* Placeholder height */
+            margin-bottom: 10px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* In a real scenario, you'd use <img src="..." alt="..."> here */
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .product-description {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0 15px 0;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #007bff; /* A clear color for the price */
+        }
+
+        /* --- Responsiveness for smaller screens --- */
+        @media (max-width: 1000px) {
+            .product-card {
+                /* On screens up to 1000px, fit 3 cards per row */
+                flex: 1 1 calc(33.333% - 14px); 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                /* On screens up to 768px, fit 2 cards per row */
+                flex: 1 1 calc(50% - 10px); 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                /* On very small screens, stack them (1 card per row) */
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-grid-container">
+        <h1>Responsive Product Grid</h1>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-image">Product 1 Image Placeholder</div>
+                <h2 class="product-title">Product 1</h2>
+                <p class="product-description">High-quality item with great features.</p>
+                <p class="product-price">₹499</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">Product 2 Image Placeholder</div>
+                <h2 class="product-title">Product 2</h2>
+                <p class="product-description">Durable and stylish for daily use.</p>
+                <p class="product-price">₹799</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">Product 3 Image Placeholder</div>
+                <h2 class="product-title">Product 3</h2>
+                <p class="product-description">Lightweight and comfortable.</p>
+                <p class="product-price">₹1,299</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">Product 4 Image Placeholder</div>
+                <h2 class="product-title">Product 4</h2>
+                <p class="product-description">Trendy design with premium quality.</p>
+                <p class="product-price">₹999</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

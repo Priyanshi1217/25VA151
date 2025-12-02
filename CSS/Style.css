@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: darksalmon; 
+    background-image: url('logo.jpeg');
+    background-position: top left;
+    background-repeat: no-repeat;*/
+    background: #2F2F2F url('Background.jpg') no-repeat top right;
+background-size: cover;
+
+}
+p{
+    font-family: Arial;
+    font-size:30px;
+    color: #f04;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 5px 1px 20px #FFF;
+    /* text-wrap: initial;  */
+    /* text-overflow: ; */
+}
+#para{
+    color: aliceblue;
+    display: inline block;
+}
+img{
+    float: left;
+}
